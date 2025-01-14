@@ -1,0 +1,142 @@
+/*Global Styles*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: orchid;
+    color:bisque;
+    padding: 10px 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: large;
+    font-weight: bold;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar li a{
+    color: beige;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar li a.active,
+.navbar li a:hover{
+    background: beige;
+    color:plum;
+    border-radius: 5px;
+}
+
+/*Mobile Navigation*/
+.menu-icon{
+    display:none;
+    cursor: pointer;
+    font-size: 24px;
+    color:lightpink;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon + .navbar{
+    display: block;
+    flex-direction:column;
+    background:darkorchid
+}
+
+@media (max-width: 768px) {
+    .menu-icon{
+        display: block;
+    }
+
+    .navbar{
+        display: none;
+        width: 100%;
+    }
+
+    .navbar li{
+        text-align: center;
+    }
+}
+
+/*Section Styles*/
+section .section-content h1{
+    color:darkmagenta;
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+section .section-content h2{
+    color:mediumpurple;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+section img{
+    height: 400px;
+    width: 400px;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+/* Footer Styles */
+footer {
+    background: #aa10ac;
+    color:azure;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.footer-left, .footer-center, .footer-right{
+    width: 30%;
+    text-align: center;
+}
+
+.footer-left h4, .footer-center h4, .footer-right h4{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-left ul, .footer-center ul, .footer-right ul{
+    list-style: none;
+}
+
+.footer-left li, .footer-center li, .footer-right li{
+    margin-bottom: 5px;
+}
+
+.footer-left a, .footer-center a, .footer-right a{
+    color: darkkhaki;
+    text-decoration: none;
+}
+
+.footer-left a:hover, .footer-center a:hover, .footer-right a:hover{
+    color: lavenderblush;
+}
